@@ -13,20 +13,22 @@
         sourceData: {
             formula: {
                 'common': [
-                    "{/}frac{ }{ }", "^{ }/_{ }", "x^{ }", "x_{ }", "x^{ }_{ }", "{/}bar{ }", "{/}sqrt{ }", "{/}nthroot{ }{ }",
-                    "{/}sum^{ }_{n=}", "{/}sum", "{/}log_{ }", "{/}ln", "{/}int_{ }^{ }", "{/}oint_{ }^{ }"
+                    "\\frac{ }{ }", "^{ }/_{ }", "x^{ }", "x_{ }", "x^{ }_{ }", "\\bar{ }", "\\sqrt{ }", "\\nthroot{ }{ }",
+                    "\\sum^{ }_{n=}", "\\sum", "\\log_{ }", "\\ln", "\\int_{ }^{ }", "\\oint_{ }^{ }",
+                    "P(E)=\\left\\{^{x=n}_{y=n+1}\\right.", "\\left\\{^{S_{\\Delta}ABC=99}_{\\sum_{_{i=1}}^nX_i=88}\\right.",
+                    "f(x)=\\left\\{^{-x\\ \\ \\ x\\le0}_{\\ x\\ \\ \\ \\ \\ x\\ge0}\\right."
                 ],
                 'symbol': [
-                    "+", "-", "{/}pm", "{/}times", "{/}ast", "{/}div", "/", "{/}bigtriangleup",
-                    "=", "{/}ne", "{/}approx", ">", "<", "{/}ge", "{/}le", "{/}infty",
-                    "{/}cap", "{/}cup", "{/}because", "{/}therefore", "{/}subset", "{/}supset", "{/}subseteq", "{/}supseteq",
-                    "{/}nsubseteq", "{/}nsupseteq", "{/}in", "{/}ni", "{/}notin", "{/}mapsto", "{/}leftarrow", "{/}rightarrow",
-                    "{/}Leftarrow", "{/}Rightarrow", "{/}leftrightarrow", "{/}Leftrightarrow"
+                    "+", "-", "\\pm", "\\times", "\\ast", "\\div", "/", "\\bigtriangleup",
+                    "=", "\\ne", "\\approx", ">", "<", "\\ge", "\\le", "\\infty",
+                    "\\cap", "\\cup", "\\because", "\\therefore", "\\subset", "\\supset", "\\subseteq", "\\supseteq",
+                    "\\nsubseteq", "\\nsupseteq", "\\in", "\\ni", "\\notin", "\\mapsto", "\\leftarrow", "\\rightarrow",
+                    "\\Leftarrow", "\\Rightarrow", "\\leftrightarrow", "\\Leftrightarrow"
                 ],
                 'letter': [
-                    "{/}alpha", "{/}beta", "{/}gamma", "{/}delta", "{/}varepsilon", "{/}varphi", "{/}lambda", "{/}mu",
-                    "{/}rho", "{/}sigma", "{/}omega", "{/}Gamma", "{/}Delta", "{/}Theta", "{/}Lambda", "{/}Xi",
-                    "{/}Pi", "{/}Sigma", "{/}Upsilon", "{/}Phi", "{/}Psi", "{/}Omega"
+                    "\\alpha", "\\beta", "\\gamma", "\\delta", "\\varepsilon", "\\varphi", "\\lambda", "\\mu",
+                    "\\rho", "\\sigma", "\\omega", "\\Gamma", "\\Delta", "\\Theta", "\\Lambda", "\\Xi",
+                    "\\Pi", "\\Sigma", "\\Upsilon", "\\Phi", "\\Psi", "\\Omega"
                 ]
             }
         },
@@ -93,7 +95,7 @@
                     latex = $item.attr('data-latex') || '';
 
                 if (latex) {
-                    me.insertLatex(latex.replace("{/}", "\\"));
+                    me.insertLatex(latex);
                 }
                 me.$widget.edui().hide();
                 return false;
